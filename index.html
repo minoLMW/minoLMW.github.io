@@ -17,6 +17,7 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- Font Awesome -->
     <script
       src="https://kit.fontawesome.com/b41084afaf.js"
       crossorigin="anonymous"
@@ -46,13 +47,17 @@
      <main>
      <!-- Home 시작 -->
       <section id="home">
-        <img class="home__avator" src="./images/증명사진.jpg" alt="Mino's profile">
-        <h2 class="home__title">안녕하세요!<br>
-            <strong class="home__title--string">마이노</strong>입니다.</h2>
+        <img
+          class="home__avatar"
+          src="./images/증명사진.jpg"
+          alt="Mino's profile"
+        />
+        <h2 class="home__title">
+          안녕하세요!<br />
+          <strong class="home__title--string">마이노</strong>입니다.
+        </h2>
         <p class="home__description">우주에서 가장 뛰어난 AI 개발자 마이노입니다!!</p>
         <a class="home__contact" href="#contact">연락처</a>
-
-
       </section>
       <!-- Home 끝 -->
         
@@ -98,62 +103,87 @@
         </section>
         <!-- about 끝 -->
 
-         <!-- skills 시작 -->
-          <section id="skills">
-            <h2>기술</h2>
-            <p>언어 및 도구</p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est consequatur animi quia. Odio nam est nihil blanditiis eveniet tempore exercitationem laborum aliquam in similique facere iste esse optio, libero consequuntur.</p>
-            <div>
-                <section>
-                    <h3>언어</h3>
-                    <ul>
-                        <li>
-                            <div><span>HTML</span><span>100%</span></div>
-                            <div><div style="width: 100%"></div></div>
-                        </li>
-                        <li>
-                            <div><span>CSS</span><span>90%</span></div>
-                            <div><div style="width: 90%"></div></div>
-                        </li>
-                        <li>
-                            <div><span>JavaScript</span><span>80%</span></div>
-                            <div><div style="width: 80%"></div></div>
-                        </li>
-                        <li>
-                            <div><span>Java</span><span>70%</span></div>
-                            <div><div style="width: 70%"></div></div>
-                        </li>
-                        <li>
-                            <div><span>Python</span><span>90%</span></div>
-                            <div><div style="width: 90%"></div></div>
-                        </li>
-                    </ul>
-                </section>
-            </div>
+        <!-- skills 시작 -->
+      <section id="skills" class="section">
+        <div class="max-container">
+          <h2 class="title">기술</h2>
+          <p class="description">언어 및 도구</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta
+            pariatur aliquam in ab. Et optio hic recusandae ipsum, nihil quae
+            cupiditate distinctio, temporibus maxime quia, blanditiis eaque?
+            Facere, ullam fuga.
+          </p>
+          <div class="tools">
+            <section class="tools__coding">
+              <h3 class="tools__title">언어</h3>
+              <ul>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>HTML</span><span>100%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 100%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>CSS</span><span>90%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 90%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>JavaScript</span><span>80%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 80%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>Java</span><span>70%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 70%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>Python</span><span>90%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 90%"></div>
+                  </div>
+                </li>
+              </ul>
+            </section>
 
-          </section>
-
-          <section>
-            <h3>도구</h3>
-            <ul>
+            <section class="tools__tools">
+              <h3 class="tools__title">도구</h3>
+              <ul>
                 <li>Visual Studio Code</li>
-                <li>Intellij</li>
+                <li>IntelliJ</li>
                 <li>Colab</li>
-                <li>jupyter</li>
+                <li>Jupyter</li>
                 <li>Xcode</li>
-            </ul>
+              </ul>
+            </section>
 
-          </section>
-
-          <section>
-            <h3>기타</h3>
-            <ul>
+            <section class="tools_etc">
+              <h3 class="tools__title">기타</h3>
+              <ul>
                 <li>Git</li>
                 <li>SLACK</li>
                 <li>Math</li>
-            </ul>
-          </section>
-          <!-- skills 끝 -->
+              </ul>
+            </section>
+          </div>
+        </div>
+      </section>
+      <!-- skills 끝 -->
 
           <!-- work 시작 -->
 
