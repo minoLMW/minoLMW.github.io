@@ -8,16 +8,18 @@
 
 /* Global 변수 */
 :root {
-  --color-primary: #1b0a2a;
-  --color-primary-variant: #2c0f3f;
-  --color-accent: #a259ff;
-  --color-accent-variant: #c084fc;
+  --color-primary: var(--color-black);
+  --color-primary-variant: var(--color-gray);
+  --color-accent: var(--color-blue);
+  --color-accent-variant: var(--color-orange);
   --color-text: var(--color-white);
 
   /* colors */
   --color-white: #fff;
   --color-black: #050a13;
-  --color-gray: #1b1e26
+  --color-blue: #03e8f9;
+  --color-orange: #fd6413;
+  --color-gray: #1b1e26;
 
   /* size */
   --size-max-width: 1200px;
@@ -102,10 +104,6 @@ button:focus {
 }
 .header__menu__item {
   padding: 8px 16px;
-  opacity: 0;
-  transform: translateY(-10px);
-  animation: menuFadeIn 0.6s ease-out forwards;
-  animation-delay: calc(var(--i) * 0.1s);
 }
 .header__menu__item:hover {
   border-bottom: 1px solid var(--color-accent);
@@ -113,12 +111,6 @@ button:focus {
 .header__menu__item:active {
   border: 1px solid var(--color-accent);
   border-radius: 4px;
-}
-@keyframes menuFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Home */
@@ -202,10 +194,14 @@ button:focus {
   width: 300px;
   height: 200px;
 }
-.job__name,
-.job__period {
-  color: var(--color-white) !important;
+.job__name {
+  color: var(--color-primary);
 }
+.job__period {
+  color: var(--color-primary);
+  font-size: 0.8rem;
+}
+
 /* skills */
 #skills {
   background-color: var(--color-primary-variant);

@@ -3,30 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mino&#39;s portfolio</title>
+    <title>Mino&#39;s Portfolio</title>
     <meta name="description" content="우주에서 가장 뛰어난 AI 개발자" />
     <meta name="author" content="Mino" />
     <!-- 소셜 미디어 공유용 메타 태그(Open Graph) -->
-    <meta property="og:title" content="마이노의 포트폴리오" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="배포후 생성된 URL" />
-    <meta property="og:image" content="배포후 생성된 이미지 URL" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Mino's Website" />
+    <meta property="og:title" content="Mino's Website" />
+    <meta property="og:url" content="https://minoLMW.github.io/" />
+    <meta property="og:description" content="안녕하세요! 마이노입니다." />
+    <meta
+      property="og:image"
+      content="https://Mino.github.io/images/profile.jpg"
+    />
+
     <link
       rel="shortcut icon"
-      href="./images/증명사진.ico"
-      type="image/x-icon"
+      href="./images/profile.ico"
+      type="images/x-icon"
     />
+    <link rel="stylesheet" href="./css/style.css" />
     <!-- Font Awesome -->
     <script
-      src="https://kit.fontawesome.com/b41084afaf.js"
+      src="https://kit.fontawesome.com/133260cff9.js"
       crossorigin="anonymous"
     ></script>
   </head>
   <body>
-    <!-- Header 시작 -->
+    <!-- Header 시작-->
     <header class="header">
       <div class="header__logo">
-        <img class="header__logo__img" src="./images/증명사진.ico" alt="Logo" />
+        <img class="header__logo__img" src="./images/profile.ico" alt="Logo" />
         <h1 class="header__logo__title"><a href="#home">Mino</a></h1>
       </div>
       <nav class="header__nav">
@@ -40,7 +48,7 @@
         </ul>
       </nav>
     </header>
-    <!-- Header 끝 -->
+    <!-- Header 끝-->
 
     <!-- Main 시작 -->
     <main>
@@ -48,8 +56,8 @@
       <section id="home">
         <img
           class="home__avatar"
-          src="./images/증명사진.jpg"
-          alt="Mino's profile"
+          src="./images/profile.jpg"
+          alt="Ryuzy's profile"
         />
         <h2 class="home__title">
           안녕하세요!<br />
@@ -66,111 +74,48 @@
       <section id="about" class="section max-container">
         <h2 class="title">마이노</h2>
         <p class="description">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam
-          incidunt iste eos illo eum! Amet voluptates molestias repellendus eum!
-          Ex praesentium adipisci et vel. Quae asperiores magnam fuga
-          reprehenderit deleniti.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+          earum fuga quam delectus eius? Dolores ut nihil rerum vero sed eum
+          ipsa cum ea ipsam, eligendi dolorum corrupti quidem odio? Lorem ipsum,
+          dolor sit amet consectetur adipisicing elit. Impedit non eaque et
+          earum libero omnis minima quisquam adipisci error quos hic obcaecati,
+          id tenetur voluptate facere beatae assumenda expedita alias!
         </p>
+        <ul class="skills">
+          <li class="skill">
+            <i class="fa-brands fa-html5 skill__icon"></i>
+            <p class="skill__title">Front-end</p>
+            <p>HTML, CSS, JavaScript, Node.js, React</p>
+          </li>
+          <li class="skill">
+            <i class="fa-solid fa-mobile skill__icon"></i>
+            <p class="skill__title">Mobile</p>
+            <p>Android, IOS, Kotlin, React-Native</p>
+          </li>
+          <li class="skill">
+            <i class="fa-solid fa-rocket skill__icon"></i>
+            <p class="skill__title">AI</p>
+            <p>Tensorflow, Python, Pytorch, Numpy</p>
+          </li>
+        </ul>
 
-        <!-- Skills 분리 -->
-        <div
-          class="about__skills"
-          style="
-            background-color: var(--color-primary);
-            padding: 2rem;
-            border-radius: 1rem;
-            margin-top: 2rem;
-          "
-        >
-          <h3 class="tools__title">Skills</h3>
-          <ul class="skills">
-            <li class="skill">
-              <i class="fa-brands fa-html5 skill__icon"></i>
-              <p class="skill__title">Front-end</p>
-              <p>HTML, CSS, JavaScript, Node.js, React</p>
-            </li>
-            <li class="skill">
-              <i class="fa-solid fa-mobile skill__icon"></i>
-              <p class="skill__title">Mobile</p>
-              <p>Android, iOS, Kotlin, React-Native</p>
-            </li>
-            <li class="skill">
-              <i class="fa-solid fa-rocket skill__icon"></i>
-              <p class="skill__title">AI</p>
-              <p>TensorFlow, Python, PyTorch, Numpy</p>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Jobs 분리 -->
-        <div
-          class="about__jobs"
-          style="
-            background-color: var(--color-primary-variant);
-            padding: 2rem;
-            border-radius: 1rem;
-            margin-top: 2rem;
-          "
-        >
-          <h3 class="tools__title">Job Experience</h3>
-          <ul
-            class="jobs"
-            style="display: flex; flex-direction: column; gap: 2rem"
-          >
-            <li
-              class="job"
-              style="
-                display: grid;
-                grid-template-columns: auto 1fr;
-                align-items: center;
-                gap: 1rem;
-              "
-            >
-              <img
-                class="job__img"
-                src="./images/ppp.png"
-                alt="ppp"
-                style="
-                  width: 100%;
-                  max-width: 300px;
-                  height: auto;
-                  border-radius: 0.5rem;
-                "
-              />
-              <div style="display: flex; flex-direction: column">
-                <p class="job__name">Engineers</p>
-                <p class="job__period">2024 ~ 2025</p>
-              </div>
-            </li>
-            <li
-              class="job"
-              style="
-                display: grid;
-                grid-template-columns: auto 1fr;
-                align-items: center;
-                gap: 1rem;
-              "
-            >
-              <img
-                class="job__img"
-                src="./images/pppp.png"
-                alt="pppp"
-                style="
-                  width: 100%;
-                  max-width: 300px;
-                  height: auto;
-                  border-radius: 0.5rem;
-                "
-              />
-              <div style="display: flex; flex-direction: column; color: white">
-                <p class="job__name">Engineers</p>
-                <p class="job__period">2024 ~ 2025</p>
-              </div>
-            </li>
-          </ul>
-        </div>
+        <ul class="jobs">
+          <li class="job">
+            <img class="job__img" src="./images/ppp.png" alt="Logo" />
+            <div>
+              <p class="job__name">엔지니어</p>
+              <p class="job__period">2025 ~ 2027</p>
+            </div>
+          </li>
+          <li class="job">
+            <img class="job__img" src="./images/pppp.png" alt="Logo" />
+            <div>
+              <p class="job__name">엔지니어</p>
+              <p class="job__period">2025 ~ 2027</p>
+            </div>
+          </li>
+        </ul>
       </section>
-
       <!-- about 끝 -->
 
       <!-- skills 시작 -->
@@ -256,7 +201,6 @@
       <!-- skills 끝 -->
 
       <!-- work 시작 -->
-
       <section id="work">
         <h2>포트폴리오</h2>
         <p>Projects</p>
@@ -268,7 +212,7 @@
             <button>Front-end <span>3</span></button>
           </li>
           <li>
-            <button>Moblie <span>3</span></button>
+            <button>Mobile <span>3</span></button>
           </li>
           <li>
             <button>AI <span>4</span></button>
@@ -276,76 +220,118 @@
         </ul>
         <ul>
           <li>
-            <a href="#" target="_blank">클론코딩 사이트</a>
-            <img src="./images/navercloud.png" alt="project 이미지" />
-            <div>
-              <h3>project #1</h3>
-              <p>네이버클라우드</p>
-            </div>
+            <a href="#" target="_blank">
+              <img src="./images/navercloud.png" alt="project 이미지" />
+              <div>
+                <h3>Project #1</h3>
+                <p>티맵</p>
+              </div>
+            </a>
           </li>
           <li>
-            <a href="#" target="_blank">클론코딩 사이트</a>
-            <img src="./images/navercloud.png" alt="project 이미지" />
-            <div>
-              <h3>project #1</h3>
-              <p>네이버클라우드</p>
-            </div>
+            <a href="#" target="_blank">
+              <img src="./images/navercloud.png" alt="project 이미지" />
+              <div>
+                <h3>Project #1</h3>
+                <p>티맵</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="./images/navercloud.png" alt="project 이미지" />
+              <div>
+                <h3>Project #1</h3>
+                <p>티맵</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="./images/navercloud.png" alt="project 이미지" />
+              <div>
+                <h3>Project #1</h3>
+                <p>티맵</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="./images/navercloud.png" alt="project 이미지" />
+              <div>
+                <h3>Project #1</h3>
+                <p>티맵</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="./images/navercloud.png" alt="project 이미지" />
+              <div>
+                <h3>Project #1</h3>
+                <p>티맵</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="./images/navercloud.png" alt="project 이미지" />
+              <div>
+                <h3>Project #1</h3>
+                <p>티맵</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <img src="./images/navercloud.png" alt="project 이미지" />
+              <div>
+                <h3>Project #1</h3>
+                <p>티맵</p>
+              </div>
+            </a>
           </li>
         </ul>
       </section>
-
       <!-- work 끝 -->
 
       <!-- license 시작 -->
-
       <section id="license">
         <h2>자격증</h2>
         <p>국가 기술 자격증</p>
         <ul>
           <li>
-            <img src="./images/정보처리기사.png" alt="정보처리기사 자격증" />
+            <img src="./images/license.png" alt="정보처리기사 자격증" />
             <div>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Mollitia praesentium accusantium maiores, sapiente maxime
-                assumenda excepturi, esse ullam ratione alias hic nisi, quia
-                libero itaque illum tempora consectetur corporis quasi?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                hic minima tenetur quasi necessitatibus natus, quisquam autem
+                reprehenderit voluptates, error culpa laboriosam iste explicabo
+                fugit, deserunt aliquam possimus voluptatem dolor!
               </p>
               <p><a href="#"></a>산업인력공단</p>
             </div>
           </li>
           <li>
-            <img src="./images/정보처리기사.png" alt="데이터분석기사 자격증" />
+            <img src="./images/license.png" alt="데이터분석기사 자격증" />
             <div>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Mollitia praesentium accusantium maiores, sapiente maxime
-                assumenda excepturi, esse ullam ratione alias hic nisi, quia
-                libero itaque illum tempora consectetur corporis quasi?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                hic minima tenetur quasi necessitatibus natus, quisquam autem
+                reprehenderit voluptates, error culpa laboriosam iste explicabo
+                fugit, deserunt aliquam possimus voluptatem dolor!
               </p>
               <p><a href="#"></a>한국데이터산업진흥원</p>
             </div>
           </li>
           <li>
-            <img src="./images/정보처리기사.png" alt="ADSP 자격증" />
+            <img src="./images/license.png" alt="ADSP 자격증" />
             <div>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Mollitia praesentium accusantium maiores, sapiente maxime
-                assumenda excepturi, esse ullam ratione alias hic nisi, quia
-                libero itaque illum tempora consectetur corporis quasi?
-              </p>
-              <p><a href="#"></a>한국데이터산업진흥원</p>
-            </div>
-          </li>
-          <li>
-            <img src="./images/정보처리기사.png" alt="SQLD 자격증" />
-            <div>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Mollitia praesentium accusantium maiores, sapiente maxime
-                assumenda excepturi, esse ullam ratione alias hic nisi, quia
-                libero itaque illum tempora consectetur corporis quasi?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                hic minima tenetur quasi necessitatibus natus, quisquam autem
+                reprehenderit voluptates, error culpa laboriosam iste explicabo
+                fugit, deserunt aliquam possimus voluptatem dolor!
               </p>
               <p><a href="#"></a>한국데이터산업진흥원</p>
             </div>
@@ -361,27 +347,27 @@
         </a>
       </aside>
       <!-- Arrow Up 끝 -->
-
-      <!-- Footer 시작 -->
-      <footer id="contact">
-        <h2>연락주세요!</h2>
-        <p>2821lee@naver.com</p>
-        <ul>
-          <li>
-            <a href="https://github.com/minoLMW" target="_blank" title="깃허브">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/minoLMW" target="_blank" title="깃허브">
-              <i class="fa-brands fa-github"></i>
-            </a>
-          </li>
-        </ul>
-        <p>&copy; Mino - all rights reserved</p>
-      </footer>
-      <!-- Footer 끝 -->
     </main>
-    <!-- Main 끝  -->
+    <!-- Main 끝 -->
+
+    <!-- Footer 시작 -->
+    <footer id="contact">
+      <h2>연락주세요!</h2>
+      <p>2821lee@naver.com</p>
+      <ul>
+        <li>
+          <a href="https://github.com/minoLMW" target="_blank" title="깃허브"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://github.com/minoLMW" target="_blank" title="깃허브"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </li>
+      </ul>
+      <p>&copy; Mino - All rights reserved</p>
+    </footer>
+    <!-- Footer 끝 -->
   </body>
 </html>
