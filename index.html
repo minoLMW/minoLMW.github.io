@@ -341,59 +341,123 @@
       <!-- license 시작 -->
       <section id="license" class="section max-container">
         <h2 class="title">자격증</h2>
-        <p class="description">국가 기술 자격증</p>
+        <div class="license__categories">
+          <button
+            class="license__category category--selected"
+            data-filter="all"
+          >
+            All
+          </button>
+          <button class="license__category" data-filter="it">IT</button>
+          <button class="license__category" data-filter="finance">
+            Finance
+          </button>
+        </div>
         <ul class="licenses">
-          <li class="license">
-            <img
-              class="license__img"
-              src="./images/license.png"
-              alt="정보처리기사 자격증"
-            />
-            <div class="license__bubble">
-              <p><a href="#" class="license__bubble__name">산업인력공단</a></p>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
-                hic minima tenetur quasi necessitatibus natus, quisquam autem
-                reprehenderit voluptates, error culpa laboriosam iste explicabo
-                fugit, deserunt aliquam possimus voluptatem dolor!
-              </p>
+          <li class="license" data-type="it" style="display: flex">
+            <div class="license__img__container">
+              <img
+                class="license__img"
+                src="./images/license.png"
+                alt="IT License"
+              />
+              <div class="license__metadata">
+                <p class="license__bubble__name">사업 인력</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
             </div>
           </li>
-          <li class="license">
-            <img
-              class="license__img"
-              src="./images/license.png"
-              alt="정보처리기사 자격증"
-            />
-            <div class="license__bubble">
-              <p><a href="#" class="license__bubble__name">산업인력공단</a></p>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
-                hic minima tenetur quasi necessitatibus natus, quisquam autem
-                reprehenderit voluptates, error culpa laboriosam iste explicabo
-                fugit, deserunt aliquam possimus voluptatem dolor!
-              </p>
+          <li class="license" data-type="it" style="display: flex">
+            <div class="license__img__container">
+              <img
+                class="license__img"
+                src="./images/license.png"
+                alt="IT License"
+              />
+              <div class="license__metadata">
+                <p class="license__bubble__name">사업 인력</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
             </div>
           </li>
-          <li class="license">
-            <img
-              class="license__img"
-              src="./images/license.png"
-              alt="정보처리기사 자격증"
-            />
-            <div class="license__bubble">
-              <p><a href="#" class="license__bubble__name">산업인력공단</a></p>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
-                hic minima tenetur quasi necessitatibus natus, quisquam autem
-                reprehenderit voluptates, error culpa laboriosam iste explicabo
-                fugit, deserunt aliquam possimus voluptatem dolor!
-              </p>
+          <li class="license" data-type="it" style="display: flex">
+            <div class="license__img__container">
+              <img
+                class="license__img"
+                src="./images/license.png"
+                alt="IT License"
+              />
+              <div class="license__metadata">
+                <p class="license__bubble__name">사업 인력</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+          </li>
+          <li class="license" data-type="finance" style="display: flex">
+            <div class="license__img__container">
+              <img
+                class="license__img"
+                src="./images/license.png"
+                alt="Finance License"
+              />
+              <div class="license__metadata">
+                <p class="license__bubble__name">사업 인력</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+          </li>
+          <li class="license" data-type="finance" style="display: flex">
+            <div class="license__img__container">
+              <img
+                class="license__img"
+                src="./images/license.png"
+                alt="Finance License"
+              />
+              <div class="license__metadata">
+                <p class="license__bubble__name">사업 인력</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
+            </div>
+          </li>
+          <li class="license" data-type="finance" style="display: flex">
+            <div class="license__img__container">
+              <img
+                class="license__img"
+                src="./images/license.png"
+                alt="Finance License"
+              />
+              <div class="license__metadata">
+                <p class="license__bubble__name">사업 인력</p>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+              </div>
             </div>
           </li>
         </ul>
       </section>
       <!-- license 끝 -->
+
+      <script>
+        const categoryButtons = document.querySelectorAll(".license__category");
+        const licenseItems = document.querySelectorAll(".license");
+
+        categoryButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            categoryButtons.forEach((btn) =>
+              btn.classList.remove("category--selected")
+            );
+            button.classList.add("category--selected");
+
+            const filter = button.dataset.filter;
+            licenseItems.forEach((item) => {
+              if (filter === "all" || item.dataset.type === filter) {
+                item.style.display = "flex";
+              } else {
+                item.style.display = "none";
+              }
+            });
+          });
+        });
+      </script>
 
       <!-- Arrow Up 시작 -->
       <aside>
