@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>나의 할 일</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body>
+    <h2>📝 나의 할 일</h2>
+    <input type="text" id="todoInput" placeholder="할 일 입력" />
+    <button onclick="addTodo()">추가</button>
+
+    <h3>할 일 목록</h3>
+    <ul id="todoList"></ul>
+
+    <script>
+      let db;
+
+      const request = indexedDB.open("MyTodoDB", 1);
+
+      request.onupgradeneeded = function (e) {
+        db = e.target.result;
+        if (!db.objectStoreNames.contains("todos")) {
+          db.createObjectStore("todos", { keyPath: "id", autoIncrement: true });
+        }
+      };
+
+      request.onsuccess = function (e) {
+        db = e.target.result;
+        displayTodos();
+      };
+
+      request.onerror = function () {
+        alert("IndexedDB 열기 실패");
+      };
+
+      function addTodo() {
+        const input = document.getElementById("todoInput");
+        const text = input.value.trim();
+        if (!text) return;
+
+        const tx = db.transaction("todos", "readwrite");
+        const store = tx.objectStore("todos");
+        store.add({ text: text });
+
+        tx.oncomplete = function () {
+          input.value = "";
+          displayTodos();
+        };
+      }
+
+      function displayTodos() {
+        const list = document.getElementById("todoList");
+        list.innerHTML = "";
+
+        const tx = db.transaction("todos", "readonly");
+        const store = tx.objectStore("todos");
+
+        const request = store.openCursor();
+
+        request.onsuccess = function (e) {
+          const cursor = e.target.result;
+          if (cursor) {
+            const li = document.createElement("li");
+            li.innerHTML = `
+              <span>${cursor.value.text}</span>
+              <button onclick="editTodo(${cursor.value.id}, '${cursor.value.text}')">수정</button>
+              <button onclick="deleteTodo(${cursor.value.id})">삭제</button>
+            `;
+            list.appendChild(li);
+            cursor.continue();
+          }
+        };
+      }
+
+      function deleteTodo(id) {
+        const tx = db.transaction("todos", "readwrite");
+        const store = tx.objectStore("todos");
+        store.delete(id);
+
+        tx.oncomplete = function () {
+          displayTodos();
+        };
+      }
+
+      function editTodo(id, oldText) {
+        const newText = prompt("새로운 할 일을 입력하세요", oldText);
+        if (newText === null) return; // 취소 눌렀을 때
+
+        const tx = db.transaction("todos", "readwrite");
+        const store = tx.objectStore("todos");
+        store.put({ id: id, text: newText });
+
+        tx.oncomplete = function () {
+          displayTodos();
+        };
+      }
+    </script>
+  </body>
+</html>
