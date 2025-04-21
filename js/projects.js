@@ -32,3 +32,27 @@ function filterProjects(filter) {
     projectsContainer.classList.remove("anim-out");
   }, 500);
 }
+
+const categoryButtons = document.querySelectorAll(".license__category");
+const licenseItems = document.querySelectorAll(".license");
+
+categoryButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    // 선택된 버튼 스타일 적용
+    categoryButtons.forEach((btn) =>
+      btn.classList.remove("category--selected")
+    );
+    button.classList.add("category--selected");
+
+    const filter = button.dataset.filter;
+
+    licenseItems.forEach((item) => {
+      // 보여줄지 숨길지 결정
+      if (filter === "all" || item.dataset.type === filter) {
+        item.classList.remove("hidden");
+      } else {
+        item.classList.add("hidden");
+      }
+    });
+  });
+});
