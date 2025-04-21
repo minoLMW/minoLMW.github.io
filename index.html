@@ -29,6 +29,8 @@
       src="https://kit.fontawesome.com/133260cff9.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="./js/main.js"></script>
+    <script defer src="./js/projects.js"></script>
   </head>
   <body>
     <!-- Header 시작-->
@@ -47,6 +49,9 @@
           <li><a href="#contact" class="header__menu__item">연락처</a></li>
         </ul>
       </nav>
+      <button class="header__toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </header>
     <!-- Header 끝-->
 
@@ -54,19 +59,21 @@
     <main>
       <!-- Home 시작 -->
       <section id="home">
-        <img
-          class="home__avatar"
-          src="./images/profile.jpg"
-          alt="Ryuzy's profile"
-        />
-        <h2 class="home__title">
-          안녕하세요!<br />
-          <strong class="home__title--string">마이노</strong>입니다.
-        </h2>
-        <p class="home__description">
-          우주에서 가장 뛰어난 AI 개발자 마이노입니다!!
-        </p>
-        <a class="home__contact" href="#contact">연락처</a>
+        <div class="home__container">
+          <img
+            class="home__avatar"
+            src="./images/profile.jpg"
+            alt="Ryuzy's profile"
+          />
+          <h2 class="home__title">
+            안녕하세요!<br />
+            <strong class="home__title--strong">마이노</strong>입니다.
+          </h2>
+          <p class="home__description">
+            우주에서 가장 뛰어난 AI 개발자 마이노입니다!!
+          </p>
+          <a class="home__contact" href="#contact">연락처</a>
+        </div>
       </section>
       <!-- Home 끝 -->
 
@@ -81,37 +88,37 @@
           earum libero omnis minima quisquam adipisci error quos hic obcaecati,
           id tenetur voluptate facere beatae assumenda expedita alias!
         </p>
-        <ul class="skills">
-          <li class="skill">
-            <i class="fa-brands fa-html5 skill__icon"></i>
-            <p class="skill__title">Front-end</p>
+        <ul class="majors">
+          <li class="major">
+            <i class="fa-brands fa-html5 major__icon"></i>
+            <p class="major__title">Front-end</p>
             <p>HTML, CSS, JavaScript, Node.js, React</p>
           </li>
-          <li class="skill">
-            <i class="fa-solid fa-mobile skill__icon"></i>
-            <p class="skill__title">Mobile</p>
+          <li class="major">
+            <i class="fa-solid fa-mobile major__icon"></i>
+            <p class="major__title">Mobile</p>
             <p>Android, IOS, Kotlin, React-Native</p>
           </li>
-          <li class="skill">
-            <i class="fa-solid fa-rocket skill__icon"></i>
-            <p class="skill__title">AI</p>
+          <li class="major">
+            <i class="fa-solid fa-rocket major__icon"></i>
+            <p class="major__title">AI</p>
             <p>Tensorflow, Python, Pytorch, Numpy</p>
           </li>
         </ul>
 
         <ul class="jobs">
           <li class="job">
-            <img class="job__img" src="./images/ppp.png" alt="Logo" />
+            <img class="job__img" src="./images/ppp.png" alt="NCSoft Logo" />
             <div>
-              <p class="job__name">엔지니어</p>
-              <p class="job__period">2025 ~ 2027</p>
+              <p class="job__name">엔씨소프트 시스템 엔지니어</p>
+              <p class="job__period">2015 ~ 2017</p>
             </div>
           </li>
           <li class="job">
-            <img class="job__img" src="./images/pppp.png" alt="Logo" />
+            <img class="job__img" src="./images/pppp.png" alt="SK Logo" />
             <div>
-              <p class="job__name">엔지니어</p>
-              <p class="job__period">2025 ~ 2027</p>
+              <p class="job__name">SK 플랫폼 엔지니어</p>
+              <p class="job__period">2012 ~ 2015</p>
             </div>
           </li>
         </ul>
@@ -129,9 +136,9 @@
             cupiditate distinctio, temporibus maxime quia, blanditiis eaque?
             Facere, ullam fuga.
           </p>
-          <div class="tools">
-            <section class="tools__coding">
-              <h3 class="tools__title">언어</h3>
+          <div class="skills">
+            <section class="skills__coding">
+              <h3 class="skills__title">언어</h3>
               <ul>
                 <li class="bar">
                   <div class="bar__metadata">
@@ -176,8 +183,8 @@
               </ul>
             </section>
 
-            <section class="tools__tools">
-              <h3 class="tools__title">도구</h3>
+            <section class="skills__tools">
+              <h3 class="skills__title">도구</h3>
               <ul>
                 <li>Visual Studio Code</li>
                 <li>IntelliJ</li>
@@ -187,8 +194,8 @@
               </ul>
             </section>
 
-            <section class="tools_etc">
-              <h3 class="tools__title">기타</h3>
+            <section class="skills_etc">
+              <h3 class="skills__title">기타</h3>
               <ul>
                 <li>Git</li>
                 <li>SLACK</li>
@@ -207,28 +214,28 @@
           <p class="description">Projects</p>
           <ul class="categories">
             <li>
-              <button class="category category--selected">
+              <button class="category category--selected" data-category="all">
                 ALL <span class="category__count">10</span>
               </button>
             </li>
             <li>
-              <button class="category">
+              <button class="category" data-category="front-end">
                 Front-end <span class="category__count">3</span>
               </button>
             </li>
             <li>
-              <button class="category">
+              <button class="category" data-category="mobile">
                 Mobile <span class="category__count">3</span>
               </button>
             </li>
             <li>
-              <button class="category">
+              <button class="category" data-category="ai">
                 AI <span class="category__count">4</span>
               </button>
             </li>
           </ul>
           <ul class="projects">
-            <li class="project">
+            <li class="project" data-type="front-end">
               <a href="#" target="_blank">
                 <img
                   src="./images/navercloud.png"
@@ -237,11 +244,11 @@
                 />
                 <div class="project__metadata">
                   <h3 class="project__title">Project #1</h3>
-                  <p>네이버클라우드</p>
+                  <p>프론트엔드 작업1</p>
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="front-end">
               <a href="#" target="_blank">
                 <img
                   src="./images/navercloud.png"
@@ -249,12 +256,12 @@
                   class="project__img"
                 />
                 <div class="project__metadata">
-                  <h3 class="project__title">Project #1</h3>
-                  <p>네이버클라우드</p>
+                  <h3 class="project__title">Project #2</h3>
+                  <p>프론트엔드 작업2</p>
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="front-end">
               <a href="#" target="_blank">
                 <img
                   src="./images/navercloud.png"
@@ -262,12 +269,12 @@
                   class="project__img"
                 />
                 <div class="project__metadata">
-                  <h3 class="project__title">Project #1</h3>
-                  <p>네이버클라우드</p>
+                  <h3 class="project__title">Project #3</h3>
+                  <p>프론트엔드 작업3</p>
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="mobile">
               <a href="#" target="_blank">
                 <img
                   src="./images/navercloud.png"
@@ -275,12 +282,12 @@
                   class="project__img"
                 />
                 <div class="project__metadata">
-                  <h3 class="project__title">Project #1</h3>
-                  <p>네이버클라우드</p>
+                  <h3 class="project__title">Project #4</h3>
+                  <p>모바일 작업1</p>
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="mobile">
               <a href="#" target="_blank">
                 <img
                   src="./images/navercloud.png"
@@ -288,13 +295,12 @@
                   class="project__img"
                 />
                 <div class="project__metadata">
-                  <h3 class="project__title">Project #1</h3>
-                  <p>네이버클라우드</p>
+                  <h3 class="project__title">Project #5</h3>
+                  <p>모바일 작업2</p>
                 </div>
               </a>
             </li>
-
-            <li class="project">
+            <li class="project" data-type="mobile">
               <a href="#" target="_blank">
                 <img
                   src="./images/navercloud.png"
@@ -302,12 +308,12 @@
                   class="project__img"
                 />
                 <div class="project__metadata">
-                  <h3 class="project__title">Project #1</h3>
-                  <p>네이버클라우드</p>
+                  <h3 class="project__title">Project #6</h3>
+                  <p>모바일 작업3</p>
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="ai">
               <a href="#" target="_blank">
                 <img
                   src="./images/navercloud.png"
@@ -315,12 +321,12 @@
                   class="project__img"
                 />
                 <div class="project__metadata">
-                  <h3 class="project__title">Project #1</h3>
-                  <p>네이버클라우드</p>
+                  <h3 class="project__title">Project #7</h3>
+                  <p>AI 작업1</p>
                 </div>
               </a>
             </li>
-            <li class="project">
+            <li class="project" data-type="ai">
               <a href="#" target="_blank">
                 <img
                   src="./images/navercloud.png"
@@ -328,8 +334,8 @@
                   class="project__img"
                 />
                 <div class="project__metadata">
-                  <h3 class="project__title">Project #1</h3>
-                  <p>네이버클라우드</p>
+                  <h3 class="project__title">Project #8</h3>
+                  <p>AI 작업2</p>
                 </div>
               </a>
             </li>
@@ -341,123 +347,59 @@
       <!-- license 시작 -->
       <section id="license" class="section max-container">
         <h2 class="title">자격증</h2>
-        <div class="license__categories">
-          <button
-            class="license__category category--selected"
-            data-filter="all"
-          >
-            All
-          </button>
-          <button class="license__category" data-filter="it">IT</button>
-          <button class="license__category" data-filter="finance">
-            Finance
-          </button>
-        </div>
+        <p class="description">국가 기술 자격증</p>
         <ul class="licenses">
-          <li class="license" data-type="it" style="display: flex">
-            <div class="license__img__container">
-              <img
-                class="license__img"
-                src="./images/license.png"
-                alt="IT License"
-              />
-              <div class="license__metadata">
-                <p class="license__bubble__name">사업 인력</p>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
+          <li class="license">
+            <img
+              class="license__img"
+              src="./images/license.png"
+              alt="정보처리기사 자격증"
+            />
+            <div class="license__bubble">
+              <p><a href="#" class="license__bubble__name">산업인력공단</a></p>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                hic minima tenetur quasi necessitatibus natus, quisquam autem
+                reprehenderit voluptates, error culpa laboriosam iste explicabo
+                fugit, deserunt aliquam possimus voluptatem dolor!
+              </p>
             </div>
           </li>
-          <li class="license" data-type="it" style="display: flex">
-            <div class="license__img__container">
-              <img
-                class="license__img"
-                src="./images/license.png"
-                alt="IT License"
-              />
-              <div class="license__metadata">
-                <p class="license__bubble__name">사업 인력</p>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
+          <li class="license">
+            <img
+              class="license__img"
+              src="./images/license.png"
+              alt="정보처리기사 자격증"
+            />
+            <div class="license__bubble">
+              <p><a href="#" class="license__bubble__name">산업인력공단</a></p>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                hic minima tenetur quasi necessitatibus natus, quisquam autem
+                reprehenderit voluptates, error culpa laboriosam iste explicabo
+                fugit, deserunt aliquam possimus voluptatem dolor!
+              </p>
             </div>
           </li>
-          <li class="license" data-type="it" style="display: flex">
-            <div class="license__img__container">
-              <img
-                class="license__img"
-                src="./images/license.png"
-                alt="IT License"
-              />
-              <div class="license__metadata">
-                <p class="license__bubble__name">사업 인력</p>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
-            </div>
-          </li>
-          <li class="license" data-type="finance" style="display: flex">
-            <div class="license__img__container">
-              <img
-                class="license__img"
-                src="./images/license.png"
-                alt="Finance License"
-              />
-              <div class="license__metadata">
-                <p class="license__bubble__name">사업 인력</p>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
-            </div>
-          </li>
-          <li class="license" data-type="finance" style="display: flex">
-            <div class="license__img__container">
-              <img
-                class="license__img"
-                src="./images/license.png"
-                alt="Finance License"
-              />
-              <div class="license__metadata">
-                <p class="license__bubble__name">사업 인력</p>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
-            </div>
-          </li>
-          <li class="license" data-type="finance" style="display: flex">
-            <div class="license__img__container">
-              <img
-                class="license__img"
-                src="./images/license.png"
-                alt="Finance License"
-              />
-              <div class="license__metadata">
-                <p class="license__bubble__name">사업 인력</p>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
-              </div>
+          <li class="license">
+            <img
+              class="license__img"
+              src="./images/license.png"
+              alt="정보처리기사 자격증"
+            />
+            <div class="license__bubble">
+              <p><a href="#" class="license__bubble__name">산업인력공단</a></p>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                hic minima tenetur quasi necessitatibus natus, quisquam autem
+                reprehenderit voluptates, error culpa laboriosam iste explicabo
+                fugit, deserunt aliquam possimus voluptatem dolor!
+              </p>
             </div>
           </li>
         </ul>
       </section>
       <!-- license 끝 -->
-
-      <script>
-        const categoryButtons = document.querySelectorAll(".license__category");
-        const licenseItems = document.querySelectorAll(".license");
-
-        categoryButtons.forEach((button) => {
-          button.addEventListener("click", () => {
-            categoryButtons.forEach((btn) =>
-              btn.classList.remove("category--selected")
-            );
-            button.classList.add("category--selected");
-
-            const filter = button.dataset.filter;
-            licenseItems.forEach((item) => {
-              if (filter === "all" || item.dataset.type === filter) {
-                item.style.display = "flex";
-              } else {
-                item.style.display = "none";
-              }
-            });
-          });
-        });
-      </script>
 
       <!-- Arrow Up 시작 -->
       <aside>
